@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: muga-game
+    runtime: static
+    buildCommand: echo Static MUGA assets ready
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
